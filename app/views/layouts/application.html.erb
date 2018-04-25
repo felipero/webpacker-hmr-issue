@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Webpacker Hmr Issue</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'hello_vue' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <div id='app'>
+      {{message}}
+    </div>
+  </body>
+</html>

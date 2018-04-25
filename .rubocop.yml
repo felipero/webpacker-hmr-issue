@@ -1,0 +1,69 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+    - '**/application.rb'
+    - '**/Rakefile'
+  Exclude:
+    # You could specify set of files or dirs while you want to be ignored by rubocop
+    - 'vendor/**/*'
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'Gemfile.lock'
+    - 'node_modules/**/*'
+    - !ruby/regexp /old_and_unused\.rb$/
+
+Rails:
+  Enabled: true
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - staging
+    - development
+    - test
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Metrics/AbcSize:
+  Exclude:
+    - 'app/routes/**/*'
+    - 'db/migrate/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'app/routes/**/*'
+    - 'db/migrate/**/*'
+    - 'spec/**/*'
+    - 'config/routes.rb'
+    - 'lib/tasks/**/*'
+    - 'config/environments/*'
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Exclude:
+    - 'app/routes/**/*'
+    - 'db/migrate/**/*'
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Naming/FileName:
+  Exclude:
+    - 'Gemfile'
+
+Rails/InverseOf:
+  Enabled: false
